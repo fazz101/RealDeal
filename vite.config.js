@@ -1,9 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [react()],
+  base: '/', // Change to '/your-repo-name/' if deploying to GitHub Pages
+  build: {
+    outDir: 'dist', // Netlify/StackBlitz expect this
+    emptyOutDir: true, // Clears old files on build
+  },
   server: {
-    open: true
+    open: true // Optional: Opens browser on dev server start
   }
-})
+});
