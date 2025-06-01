@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  plugins: [react()],
   server: {
     open: true
   },
@@ -9,8 +11,15 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        manualChunks: undefined,
-        assetFileNames: '[name].[ext]'
+        assetFileNames: (assetInfo) => {
+          return assetInfo.name
+        },
+        entryFileNames: (chunkInfo) => {
+          return chunkInfo.name
+        },
+        chunkFileNames: (chunkInfo) => {
+          return chunkInfo.name
+        }
       }
     }
   }
