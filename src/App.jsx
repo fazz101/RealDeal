@@ -6,23 +6,23 @@ function App() {
 
   const beforeAfterImages = [
     {
-      before: '/ryanbefore.jpg',
-      after: '/ryanafter.jpg',
+      before: './ryanbefore.jpg',
+      after: './ryanafter.jpg',
       name: 'Ryan'
     },
     {
-      before: '/alex1before.jpg',
-      after: '/alex1after.jpg',
+      before: './alex1before.jpg',
+      after: './alex1after.jpg',
       name: 'Alex'
     },
     {
-      before: '/jordanbefore.jpg',
-      after: '/jordanafter.jpg',
+      before: './jordanbefore.jpg',
+      after: './jordanafter.jpg',
       name: 'Jordan'
     },
     {
-      before: '/chrisbefore.jpg',
-      after: '/chrisafter (1).jpg',
+      before: './chrisbefore.jpg',
+      after: './chrisafter (1).jpg',
       name: 'Chris'
     }
   ];
@@ -32,7 +32,7 @@ function App() {
       {/* Hero Section */}
       <div className="relative h-[600px] bg-black">
         <img
-          src="/clinicwall.jpeg"
+          src="./clinicwall.jpeg"
           alt="R.O.B Hair Restoration Clinic"
           className="w-full h-full object-cover opacity-50"
         />
